@@ -29,17 +29,21 @@ const FilmComponent: FC<Props> = ({
       <div
         key={id}
         className={`relative w-48 h-100 group cursor-pointer overflow-hidden rounded-md ${
-          position === 'horizontal' && 'w-36'
+          position === 'horizontal' && 'w-24 h-32'
         }`}
       >
         <img
           src={thumbnail}
           alt=""
           className={`top-0 left-0 w-full h-64 object-cover cursor-pointer group-hover:scale-125 transition-transform duration-300 ${
-            position === 'horizontal' && 'h-36 w-36'
+            position === 'horizontal' && 'h-32 w-24'
           }`}
         />
-        <Label className="text-left p-1 w-32 rounded-r-lg text-lg inline-block bg-[#A3765D] absolute top-[10%] translate-y-[-50%]">
+        <Label
+          className={`text-left p-1 w-32 rounded-r-lg text-lg inline-block bg-[#A3765D] absolute top-[10%] translate-y-[-50%] ${
+            position === 'horizontal' && 'text-xs'
+          }`}
+        >
           Episode: {episode}
         </Label>
         <BsFillPlayCircleFill
