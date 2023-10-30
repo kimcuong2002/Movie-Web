@@ -7,7 +7,12 @@ type Props = {
 };
 
 const SectionTag: FC<Props> = ({ nameTag }) => {
-  return <Label>{nameTag}</Label>;
+  return (
+    <div className="mb-5">
+      <Label className="text-[#A3765D] uppercase text-2xl">{nameTag}</Label>
+      <hr className="w-full border-[#A3765D] border-21" />
+    </div>
+  );
 };
 
 export default SectionTag;
