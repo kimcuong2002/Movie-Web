@@ -3,25 +3,16 @@ import { FC } from 'react';
 import { BsFillPlayCircleFill } from 'react-icons/bs';
 
 import { Label } from '..';
+// eslint-disable-next-line no-restricted-imports
+import { FilmType } from '@/ts/types/film';
 
-type Props = {
-  id?: string;
-  position?: 'vertical' | 'above' | 'horizontal';
-  className?: string;
-  thumbnail: string;
-  nameFilm: string;
-  episode: number | string;
-  year?: string;
-  author?: string;
-};
-
-const FilmComponent: FC<Props> = ({
+const FilmComponent: FC<FilmType> = ({
   id,
   position = 'vertical',
-  thumbnail,
+  poster_path,
   episode,
-  nameFilm,
-  year,
+  filmName,
+  release_date,
   author,
 }) => {
   return (
@@ -29,14 +20,14 @@ const FilmComponent: FC<Props> = ({
       <div
         key={id}
         className={`relative w-48 h-100 group cursor-pointer overflow-hidden rounded-md ${
-          position === 'horizontal' && 'w-24 h-32'
+          position === 'horizontal' && '!w-24 !h-32'
         }`}
       >
         <img
-          src={thumbnail}
+          src={poster_path}
           alt=""
           className={`top-0 left-0 w-full h-64 object-cover cursor-pointer group-hover:scale-125 transition-transform duration-300 ${
-            position === 'horizontal' && 'h-32 w-24'
+            position === 'horizontal' && '!w-24 !h-32'
           }`}
         />
         <Label
@@ -57,7 +48,7 @@ const FilmComponent: FC<Props> = ({
               : 'hidden'
           }`}
         >
-          {nameFilm}
+          {filmName}
         </Label>
       </div>
       <div className={`${position === 'horizontal' && 'flex flex-col px-3'}`}>
@@ -66,14 +57,14 @@ const FilmComponent: FC<Props> = ({
             position === 'above' ? 'hidden' : ''
           }`}
         >
-          {nameFilm}
+          {filmName}
         </Label>
         <Label
           className={`text-lg uppercase ${position === 'above' && 'hidden'}`}
         >
           {author}
         </Label>
-        <Label className="inline-block">{year}</Label>
+        <Label className="inline-block">{release_date}</Label>
       </div>
     </div>
   );
