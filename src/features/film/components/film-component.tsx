@@ -15,18 +15,22 @@ const FilmComponent: FC<FilmType> = ({
   slug,
 }) => {
   return (
-    <div className={`${position === 'horizontal' && 'flex'}`}>
+    <div
+      className={`w-48 ${
+        position === 'horizontal' && 'w-full grid grid-cols-12'
+      }`}
+    >
       <div
         key={_id}
-        className={`relative w-48 h-100 group cursor-pointer overflow-hidden rounded-md ${
-          position === 'horizontal' && '!w-24 !h-32'
+        className={`relative group cursor-pointer overflow-hidden rounded-md ${
+          position === 'horizontal' && 'col-span-4 w-full h-36'
         }`}
       >
         <img
           src={thumb_url}
           alt=""
           className={`top-0 left-0 w-full h-64 object-cover cursor-pointer group-hover:scale-125 transition-transform duration-300 ${
-            position === 'horizontal' && '!w-24 !h-32'
+            position === 'horizontal' && 'col-span-4'
           }`}
         />
         <Label
@@ -36,7 +40,7 @@ const FilmComponent: FC<FilmType> = ({
         >
           Year: {year}
         </Label>
-        <Link to={`films/${slug}`}>
+        <Link to={`/${slug}`}>
           <BsFillPlayCircleFill
             className="absolute top-1/2 left-1/2  translate-y-[-50%] translate-x-[-50%] text-6xl !hidden group-hover:!block scale-75 transition-transform duration-500"
             sx={{ fontSize: 80 }}
@@ -45,22 +49,20 @@ const FilmComponent: FC<FilmType> = ({
         <Label
           className={`${
             position === 'above'
-              ? 'absolute bottom-0 w-full text-white text-center left-1/2 translate-x-[-50%] py-1 text-xl bg-[rgba(0,0,0,0.7)] '
+              ? 'absolute bottom-0 w-full text-white text-center left-1/2 translate-x-[-50%] py-1 text-lg bg-[rgba(0,0,0,0.7)] '
               : 'hidden'
           }`}
         >
           {name}
         </Label>
       </div>
-      <div className={`${position === 'horizontal' && 'flex flex-col px-3'}`}>
-        <Label
-          className={`text-center w-full text-black text-xl uppercase cursor-pointer mt-2 dark:text-white ${
-            position === 'above' ? 'hidden' : ''
-          }`}
-        >
-          {name}
-        </Label>
-      </div>
+      <p
+        className={`!text-center h-32 col-span-8 w-full text-overflow-ellipsis-one white-space-nowrap text-black text-base uppercase cursor-pointer mt-2 dark:text-white ${
+          position === 'above' ? 'hidden' : ''
+        }`}
+      >
+        {name}
+      </p>
     </div>
   );
 };
