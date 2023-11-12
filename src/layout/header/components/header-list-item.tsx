@@ -17,7 +17,7 @@ const HeaderListItem = () => {
             className="group"
             isActive={checkActive(el.link)}
           >
-            <Button variant="ghost" className="uppercase text-ellipsis">
+            <Button variant="ghost" className="uppercase text-ellipsis !w-full">
               {el.headerItemName}
             </Button>
           </Link>
