@@ -9,20 +9,22 @@ import HeaderComponent from './header';
 
 const LayoutComponent = () => {
   return (
-    <div className="h-full mx-auto">
+    <div className="h-full mx-auto ">
       <HeaderComponent />
-      <div className="px-4 py-20 flex flex-col w-3/5 mx-auto">
-        <ErrorBoundary fallbackRender={fallbackRender}>
-          <Suspense
-            fallback={
-              <div className="w-full h-full flex justify-center items-center">
-                <span>Loading...</span>
-              </div>
-            }
-          >
-            <Outlet />
-          </Suspense>
-        </ErrorBoundary>
+      <div className="w-full dark:bg-[#02080f] bg-opacity-100 ">
+        <div className="px-4 py-20 flex flex-col w-3/5 mx-auto ">
+          <ErrorBoundary fallbackRender={fallbackRender}>
+            <Suspense
+              fallback={
+                <div className="w-full h-full flex justify-center items-center">
+                  <span>Loading...</span>
+                </div>
+              }
+            >
+              <Outlet />
+            </Suspense>
+          </ErrorBoundary>
+        </div>
       </div>
       <Footer />
     </div>
