@@ -49,6 +49,12 @@
   }
 }
 
+:root {
+  --tw-bg-opacity: 1;
+  --yellow-brown-color: rgb(163 118 93 / var(--tw-bg-opacity));
+  --bg-color: (#02080f, var(--tw-bg-opacity));
+}
+
 @layer base {
   * {
     @apply border-border;
