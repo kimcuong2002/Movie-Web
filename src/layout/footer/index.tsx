@@ -6,7 +6,7 @@ import motchill from '../../assets/images/motchill.png';
 
 const Footer = () => {
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center text-white bg-black py-20">
       <div className="w-full flex flex-col px-10 text-left gap-5 md:grid grid-cols-3 lg:w-3/5">
         <div>
           <img src={motchill} alt="" className="w-48" />
