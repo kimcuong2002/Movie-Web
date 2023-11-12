@@ -6,6 +6,7 @@ import { routeList } from '@/data/constant/navs';
 import LayoutComponent from '@/layout';
 
 const NotFound = lazy(() => import('@/pages/not-found'));
+const FilmDetail = lazy(() => import('@/pages/film-detail'));
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
       {
         path: '*',
         element: <NotFound />,
+      },
+      {
+        path: '/:slug',
+        element: <FilmDetail />,
       },
     ],
   },
