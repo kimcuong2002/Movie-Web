@@ -16,6 +16,8 @@ export type FilmType = {
   year?: number;
   view?: number;
   actor?: [];
+  time?: string;
+  episode_total?: string;
   category?: [
     {
       id?: string;
@@ -30,17 +32,17 @@ export type FilmType = {
       slug?: string;
     },
   ];
-  episodes?: [
+  episodes?: Episode[];
+};
+
+type Episode = {
+  server_name?: string;
+  server_data?: [
     {
-      server_name?: string;
-      server_data?: [
-        {
-          name?: number;
-          slug?: number;
-          filename?: string;
-          link_embed?: string;
-        },
-      ];
+      name?: number;
+      slug?: number;
+      filename?: string;
+      link_embed?: string;
     },
   ];
 };
@@ -48,6 +50,13 @@ export type FilmType = {
 export type ResponseData = {
   status: number;
   items: FilmData[];
+};
+
+export type ResponseDataFilmDetail = {
+  msg: string;
+  status: boolean;
+  movie: FilmType;
+  episodes: Episode[];
 };
 
 export type FilmData = Partial<
