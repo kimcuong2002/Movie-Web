@@ -12,7 +12,7 @@ const LayoutComponent = () => {
     <div className="h-full mx-auto ">
       <HeaderComponent />
       <div className="w-full dark:bg-[#02080f] bg-opacity-100 ">
-        <div className="px-4 py-20 flex flex-col w-3/5 mx-auto ">
+        <div className="px-4 py-20 flex flex-col w-4/5 mx-auto ">
           <ErrorBoundary fallbackRender={fallbackRender}>
             <Suspense
               fallback={
