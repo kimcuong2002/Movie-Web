@@ -8,7 +8,7 @@ export type FilmType = {
   content?: string;
   type?: string;
   status?: string;
-  thumb_url?: string;
+  thumb_url: string;
   poster_url?: string;
   episode_current?: number;
   quality?: string;
@@ -35,16 +35,13 @@ export type FilmType = {
   episodes?: Episode[];
 };
 
-type Episode = {
-  server_name?: string;
-  server_data?: [
-    {
-      name?: number;
-      slug?: number;
-      filename?: string;
-      link_embed?: string;
-    },
-  ];
+export type Episode = { server_name?: string; server_data: ServerData[] };
+
+export type ServerData = {
+  name?: number;
+  slug?: number;
+  filename?: string;
+  link_embed?: string;
 };
 
 export type ResponseData = {
