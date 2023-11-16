@@ -8,12 +8,21 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
+    screens: {
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '960px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1240px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1836px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '2624px',
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       colors: {
