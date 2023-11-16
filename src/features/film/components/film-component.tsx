@@ -16,26 +16,27 @@ const FilmComponent: FC<FilmType> = ({
 }) => {
   return (
     <div
-      className={`w-48 ${
-        position === 'horizontal' && 'w-full grid grid-cols-12'
+      className={`${
+        position === 'horizontal' && 'w-full grid grid-cols-12 h-32'
       }`}
     >
       <div
         key={_id}
         className={`relative group cursor-pointer overflow-hidden rounded-md ${
-          position === 'horizontal' && 'col-span-4 w-full h-36'
+          position === 'horizontal' && 'col-span-4 w-full h-32 rounded-none'
         }`}
       >
         <img
           src={thumb_url}
           alt=""
           className={`top-0 left-0 w-full h-64 object-cover cursor-pointer group-hover:scale-125 transition-transform duration-300 ${
-            position === 'horizontal' && 'col-span-4'
+            position === 'horizontal' &&
+            'col-span-4 border-2 solid border-white'
           }`}
         />
         <Label
           className={`text-left p-1 w-32 rounded-r-lg text-lg inline-block bg-[#A3765D] absolute top-[10%] translate-y-[-50%] ${
-            position === 'horizontal' && 'text-xs'
+            position === 'horizontal' && 'text-xs w-[70] '
           }`}
         >
           Year: {year}
