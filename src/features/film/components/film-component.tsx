@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Label } from '../../../components';
 import { FilmType } from '@/features/film';
 
-const FilmComponent: FC<FilmType> = ({
+export const FilmComponent: FC<FilmType> = ({
   _id,
   position = 'vertical',
   year,
@@ -67,5 +67,3 @@ const FilmComponent: FC<FilmType> = ({
     </div>
   );
 };
-
-export default FilmComponent;

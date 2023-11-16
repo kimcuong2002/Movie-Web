@@ -7,6 +7,7 @@ import LayoutComponent from '@/layout';
 
 const NotFound = lazy(() => import('@/pages/not-found'));
 const FilmDetail = lazy(() => import('@/pages/film-detail'));
+const FilmVideo = lazy(() => import('@/pages/film-video'));
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
       {
         path: '/:slug',
         element: <FilmDetail />,
+      },
+      {
+        path: '/:slug/:id',
+        element: <FilmVideo />,
       },
     ],
   },

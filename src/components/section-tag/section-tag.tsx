@@ -6,7 +6,7 @@ type Props = {
   nameTag: string;
 };
 
-const SectionTag: FC<Props> = ({ nameTag }) => {
+export const SectionTag: FC<Props> = ({ nameTag }) => {
   return (
     <div className="mb-5">
       <Label className="text-[#A3765D] uppercase text-2xl">{nameTag}</Label>
@@ -14,5 +14,3 @@ const SectionTag: FC<Props> = ({ nameTag }) => {
     </div>
   );
 };
-
-export default SectionTag;

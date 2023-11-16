@@ -1,11 +1,9 @@
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// eslint-disable-next-line no-restricted-imports
-import SectionTag from '@/components/section-tag/section-tag';
+import { SectionTag } from '@/components';
 import { useFilmsListQuery } from '@/features/film';
-// eslint-disable-next-line no-restricted-imports
-import FilmComponent from '@/features/film/components/film-component';
+import { FilmComponent } from '@/features/film';
 import { getImage } from '@/utils';
 
 const Home = () => {

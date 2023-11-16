@@ -8,7 +8,7 @@ interface Props {
   onPageChange: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<Props> = ({
+export const Pagination: React.FC<Props> = ({
   currentPage,
   totalPages,
   onPageChange,
@@ -49,5 +49,3 @@ const Pagination: React.FC<Props> = ({
     </div>
   );
 };
-
-export default Pagination;

@@ -5,11 +5,8 @@ import { Link, useParams } from 'react-router-dom';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// eslint-disable-next-line import/order
 import { useFilmDetailQuery, useFilmsListQuery } from '@/features/film';
-
-// eslint-disable-next-line no-restricted-imports
-import FilmComponent from '@/features/film/components/film-component';
+import { FilmComponent } from '@/features/film';
 import { getImage } from '@/utils';
 
 const FilmVideo = () => {

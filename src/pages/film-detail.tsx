@@ -3,15 +3,12 @@ import { useMemo } from 'react';
 import { CiPlay1 } from 'react-icons/ci';
 import { Link, useParams } from 'react-router-dom';
 
-// eslint-disable-next-line no-restricted-imports
-import SectionTag from '@/components/section-tag/section-tag';
+import { SectionTag } from '@/components';
 import { useFilmDetailQuery, useFilmsListQuery } from '@/features/film';
-import { Episode } from '@/features/film';
-// eslint-disable-next-line no-restricted-imports
-import FilmComponent from '@/features/film/components/film-component';
+import { FilmComponent } from '@/features/film';
 import { getImage } from '@/utils';
 
-const FilmDetail: React.FC<Episode> = () => {
+const FilmDetail: React.FC = () => {
   const params = useParams();
 
   const { data } = useFilmDetailQuery(params.slug!);

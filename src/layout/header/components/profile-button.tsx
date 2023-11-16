@@ -1,14 +1,9 @@
-/* eslint-disable no-restricted-imports */
 import { BiLogIn } from 'react-icons/bi';
 import { ImProfile } from 'react-icons/im';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components';
+import { Button } from '@/components';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components';
 
 const ProfileButton = () => {
   return (

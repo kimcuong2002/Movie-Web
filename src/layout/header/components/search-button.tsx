@@ -1,14 +1,8 @@
-/* eslint-disable no-restricted-imports */
-// import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar';
 import { IoMdSearch } from 'react-icons/io';
 
 import { Input } from '@/components';
-import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import { Button } from '@/components';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components';
 
 const SearchButton = () => {
   return (

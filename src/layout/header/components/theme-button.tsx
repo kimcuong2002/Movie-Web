@@ -1,13 +1,12 @@
-/* eslint-disable no-restricted-imports */
 import { Moon, Sun } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from '@/components';
 import { useTheme } from '@/provider/theme-config-provider';
 
 export function ThemeButton() {
