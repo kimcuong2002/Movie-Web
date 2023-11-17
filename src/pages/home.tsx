@@ -1,14 +1,24 @@
+import { useEffect } from 'react';
+
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { SectionTag } from '@/components';
-import { useFilmsListQuery } from '@/features/film';
+import { useFilmStore, useFilmsListQuery } from '@/features/film';
 import { FilmComponent } from '@/features/film';
 import { getImage } from '@/utils';
 
 const Home = () => {
+  const setListFilm = useFilmStore((state) => state.setListFilm);
+  const listFilm = useFilmStore((state) => state.listFilm);
   const { data } = useFilmsListQuery();
   const hotFilm = data?.items.slice(0, 11);
+
+  useEffect(() => {
+    if (data) {
+      setListFilm(data.items);
+    }
+  }, [data, setListFilm]);
 
   return (
     <div>
@@ -43,13 +53,16 @@ const Home = () => {
             </div>
           ))}
       </Swiper>
-      <div className="grid grid-cols-12 mt-5 gap-4">
+      <div
+        className="grid grid-cols-12 
+    allowFullScreen: true,mt-5 gap-4"
+      >
         <div className="col-span-12 xl:col-span-9 grid cols-span-12 ">
           <div className="col-span-12">
             <SectionTag nameTag="film bộ" />
             <div className="grid grid-cols-12 gap-4 md:col-span-12">
-              {data &&
-                data.items?.map((el) => (
+              {listFilm &&
+                listFilm.map((el) => (
                   <div
                     key={el._id}
                     className="col-span-6 md:col-span-4 lg:col-span-2 xl:col-span-2"

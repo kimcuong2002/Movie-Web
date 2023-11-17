@@ -67,4 +67,9 @@ export const HEADER_LIST_ITEMS = [
     headerItemName: 'tv-show',
     link: './tv-show',
   },
+  {
+    id: 10,
+    headerItemName: '18+',
+    link: './18+',
+  },
 ];

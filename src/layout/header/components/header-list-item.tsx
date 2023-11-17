@@ -13,7 +13,7 @@ const HeaderListItem = () => {
           <Link
             to={el.link}
             key={el.id}
-            className="group"
+            className="group "
             isActive={checkActive(el.link)}
           >
             <Button variant="ghost" className="uppercase text-ellipsis !w-full">
@@ -22,7 +22,6 @@ const HeaderListItem = () => {
           </Link>
         </div>
       ))}
-      <div></div>
     </div>
   );
 };
