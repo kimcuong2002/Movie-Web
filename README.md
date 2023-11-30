@@ -28,7 +28,7 @@ Clone this project and use it to create your own [React.js](https://nextjs.org) 
 Run the following command on your local environment:
 
 ```shell
-git clone --depth=1 https://github.com/sonht113/react-boilerplate-for-starter.git
+git clone https://github.com/kimcuong2002/Movie-Web.git
 cd my-project-name
 pnpm install
 ```
