@@ -1,10 +1,8 @@
-# Boilerplate and Starter for React JS 18+, Tailwind CSS v3.3 and Typescript
+#🚀⚡ Clone website to watch movies MotChill, the website has basic features such as watching movies, searching for movies... I used Typescript, Tailwindcss, Shadcn ui, Axios, Tanstack Query to create this website.
 
-<p align="center">
-<img src="public/assets/imgs/banner.png?raw=true" alt="React js starter banner" />
-</p>
 
-🚀🚀🚀 Boilerplate and Starter for React.js, Shadcn/ui, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: React.js, TypeScript, Axios, ESLint, Prettier, Husky, Lint-Staged, VSCode, PostCSS, Tailwind CSS.
+
+
 
 Clone this project and use it to create your own [React.js](https://nextjs.org) project.
 
